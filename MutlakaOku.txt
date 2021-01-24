@@ -1,0 +1,29 @@
+Selam dostum umarım bu yeri okuyorsundur
+
+Public sunuculara özel moderasyon alt yapı paylaşma kararı aldım
+kendimin de kullandığı bir alt yapıdır.
+Alt yapıda bazı eksiklikler vardır fakat elimden geldiğince
+hatasız yapmayı denedim benim kontrol ettiğim kadar botlarda herhangi bir hatayla
+karşılaşmadım eğer siz bir sorun veya hatayla karşılaşırsanız lütfen ( Tonlys‷#1823 ) adresinden
+bana ulaşsınız.
+
+
+YUKARIYI KESİNLİKLE !!!
+YUKARIYI KESİNLİKLE !!!
+YUKARIYI KESİNLİKLE !!!
+YUKARIYI KESİNLİKLE !!!
+
+
+atonlys.js adlı dosyanın içinde size lazım olan bütün her şeyi
+koydum sadece sağ tarafındaki bilgi kutucuklarını okursanız botu
+rahatca çalıştıra bilirsiniz..
+
+
+
+//Eklemediğim Komutlar
+
+Yasaklıtag sistemi
+Toplutaşı, Yavaşmod, tagtara, üyetara,
+bot-kontrol, başvuru, 3 saate bir iltifat etme,
+katıldı Gibi bazı komutlar kasıtlı olarak eklenmeiştir
+kendiniz ekleyip botu geliştiriniz
