@@ -8,12 +8,12 @@ Public Sunuculara Özel Moderasyon Alt Yapı Paylaşma Kararı Aldım Kendimin D
 
 //Eklenmemiş Komutlar
 
-Yasaklıtag sistemi
-Toplutaşı
-Yavaşmod
-Tagtara
-Üyetara
-Katıldı
+Yasaklıtag sistemi,
+Toplutaşı,
+Yavaşmod,
+Tagtara,
+Üyetara,
+Katıldı,
 Gibi Bazı Komutlar Kasıtlı Olarak Eklenmemiştir
 Kendiniz Ekleyip Botu Geliştiriniz.
 
