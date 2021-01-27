@@ -21,14 +21,14 @@ exports.execute = async (client, message, args) => {
     client.channels.cache.get(client.config.ban.log).send(embed.setDescription(`${user} adlı kişinin kalıcı banı kaldırılmıştır.`)).catch(e => { })
 
 
-
+   qdb.delete(`fBan.${user}`) //KALICI BAB KOMUTU
 
     message.guild.members.unban(user).catch(err => message.channel.send("Belirtilen ID numarasına sahip bir ban bulunamadı!").then(x => x.delete({timeout: 5000})));
 	client.channels.cache.get(client.config.ban.log).send(embed.setDescription(`${user} üyesinin başarılı şekilde uzaklaştırılması kaldırıldı.\n• Sebep: \`${reason}\` `)).catch(e => { });
 
    
 
-   qdb.delete(`fBan.${user.id}`) //KALICI JAİL KOMUTU
+
     message.react(client.config.emoji.onay)
 }
 exports.conf = {
