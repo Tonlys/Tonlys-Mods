@@ -14,31 +14,30 @@ exports.execute = async (client, message, args) => {
     let KaraListe = qdb.fetch(`karaL.${message.author.id}`)
     if(KaraListe) return  message.react(client.config.emoji.red);
 
-
-    let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
+	  if (!args[0] || isNaN(args[0])) return message.channel.send(embed.setDescription("Geçerli bir kişi ID'si belirtmelisin!")).then(x => x.delete({timeout: 5000}));
+    let user = args[0];
     if(!user) return message.channel.send(embed.setDescription("Geçerli bir üye belirtmelisin!")).then(x => x.delete({timeout: 5000})).catch(e => { });
 
     let reason = args.splice(1).join(" ");
     if(!reason) reason = "Belirtilmedi"
 
-    if (message.member.roles.highest.position <= user.roles.highest.position) return message.channel.send(`Senden Üstün Veye Aynı Rolde Olan Bir Yetkiliye Ban Atamazsın!`).then(x => x.delete({timeout: 5000})).catch(e => { });
 
     qdb.add(`banAtma.${message.member.id}`, 1)
 
 
-    client.channels.cache.get(client.config.ban.log).send(embed.setDescription(`${user} (\`${user.id}\`) üyesinin başarılı şekilde uzaklaştırılması kaldırıldı.\n• Sebep: \`${reason}\` `)).catch(e => { });
 
 
+    message.guild.members.unban(user).catch(err => message.channel.send("Belirtilen ID numarasına sahip bir ban bulunamadı!").then(x => x.delete({timeout: 5000})));
+		client.channels.cache.get(client.config.ban.log).send(embed.setDescription(`${user} üyesinin başarılı şekilde uzaklaştırılması kaldırıldı.\n• Sebep: \`${reason}\` `)).catch(e => { });
 
-    user.unban().catch(e => { });
-      message.react(client.config.emoji.onay)
+    message.react(client.config.emoji.onay)
 };
 
 
 
 
 exports.conf = {
-  command: "ban", // Asıl komutumuz
+  command: "unban", // Asıl komutumuz
   description: "Ban Atar", // Komut açıklamamız
-  aliases: ["yasakla"] // Komutumuzun yardımcıları
+  aliases: ["unyasakla"] // Komutumuzun yardımcıları
 }
