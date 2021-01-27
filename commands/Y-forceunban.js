@@ -15,7 +15,6 @@ exports.execute = async (client, message, args) => {
     let user = args[0];
     let reason = args.splice(1).join(" ");
     if(!reason) reason = "Belirtilmedi"
-    if (message.member.roles.highest.position <= user.roles.highest.position) return message.channel.send(`Senden Üstün Veye Aynı Rolde Olan Bir Yetkiliye Ban Atamazsın!`).then(x => x.delete({timeout: 5000})).catch(e => { });
 
 
     qdb.add(`banAtma.${message.member.id}`, 1)
