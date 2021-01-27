@@ -73,7 +73,7 @@ client.config = {
     forceban : "", //Force Ban Yetkili
     banyetkili : "", //Normal Ban Yetkilisi
     log : "", //Logu
-    banlimit : "3", //Ban Limitin Kaç olacağını yazınız Örnek (3 : yetkili 3 kere ban attıktan sonra yetkisini çeker)
+    banlimit : 3, //Ban Limitin Kaç olacağını yazınız Örnek (3 : yetkili 3 kere ban attıktan sonra yetkisini çeker)
   },
 
   allmute : {
