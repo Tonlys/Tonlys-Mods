@@ -26,7 +26,7 @@ exports.execute = async (client, message, args) => {
     qdb.add(`banAtma.${message.member.id}`, 1)
 
 
-    client.channels.cache.get(client.config.ban.log).send(embed.setDescription(`${user} (\`${user.id}\`) üyesinin başarılı şekilde suncudan uzaklaştırıldı\n• Sebep: \`${reason}\` `)).catch(e => { });
+    client.channels.cache.get(client.config.ban.log).send(embed.setDescription(`${user} (\`${user.id}\`) üyesinin başarılı şekilde uzaklaştırılması kaldırıldı.\n• Sebep: \`${reason}\` `)).catch(e => { });
 
 
 
